@@ -1,0 +1,26 @@
+{
+  "name": "retropaddleball-site",
+  "version": "1.0.0",
+  "description": "Official website for Retro Paddle Ball game",
+  "main": ".eleventy.js",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "clean": "rm -rf _site"
+  },
+  "keywords": ["eleventy", "static-site", "game", "retro", "paddle-ball"],
+  "author": "StanSween",
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stanlymt/retro-paddle-ball"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
