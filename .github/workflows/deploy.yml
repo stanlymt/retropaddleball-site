@@ -3,8 +3,6 @@ name: Deploy Eleventy site to GitHub Pages
 on:
   push:
     branches: [ main ]
-    paths:
-      - 'retropaddleball-site/**'
   workflow_dispatch:
 
 permissions:
