@@ -95,7 +95,7 @@ Want to experience Retro Paddle Ball for yourself?
 
 I'm an engineering leader with 20+ years of experience scaling products, platforms, and people across global organizations, including Paylocity, Microsoft, Oracle, and Schneider Electric. I specialize in building high-performing teams, shaping technical strategy, and delivering outcomes that matter, whether in modernizing legacy systems or leading multi-organization platform integrations.
 
-At Paylocity, I founded and scaled the Position Management team in Prague. Over the course of two years, we delivered foundational HR features—Multiple Positions support, Real-Time Mutation Events, Access Group Automation, and Observability Dashboards—and led a pivotal enterprise integration with Airbase. From zero to launch, we shipped 90% of scope six weeks ahead of MVP, proving that a lean team with the right guardrails can deliver outsized impact.
+At Paylocity, I founded and scaled the Position Management team in Prague. Over the course of two years, I delivered foundational HR features—Multiple Positions support, Real-Time Mutation Events, Access Group Automation, and Observability Dashboards—and led a pivotal enterprise integration with Airbase. From zero to launch, I shipped 90% of scope six weeks ahead of MVP, proving that a lean team with the right guardrails can deliver outsized impact.
 
 ### What Drives Me
 

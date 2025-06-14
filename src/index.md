@@ -114,5 +114,5 @@ Retro Paddle Ball was created by a passionate engineer who wanted to build somet
 
 <div class="text-center mt-8">
   <p class="text-xl font-bold">Ready to play? Download now and join the fun!</p>
-  <p class="mt-2">Questions or feedback? <a href="/support" class="text-blue-600 hover:underline">Contact us</a></p>
+  <p class="mt-2">Questions or feedback? <a href="/support" class="text-blue-600 hover:underline">Contact me</a></p>
 </div>

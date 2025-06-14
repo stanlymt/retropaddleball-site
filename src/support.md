@@ -5,11 +5,11 @@ title: Support
 
 # Support
 
-Thank you for using Retro Paddle Ball! If you're experiencing any issues or have questions about the game, we're here to help.
+Thank you for using Retro Paddle Ball! If you're experiencing any issues or have questions about the game, I'm here to help.
 
 ## Contact Information
 
-For any inquiries or assistance, please feel free to contact us:
+For any inquiries or assistance, please feel free to contact me:
 
 - By email: <span class="e-addr"><span class="e-part">hello</span><span class="e-special">[at]</span><span class="e-domain">retropaddleapp</span><span class="e-special">[dot]</span><span class="e-tld">com</span></span>
 
@@ -27,11 +27,11 @@ If you encounter any bugs or technical issues while playing Retro Paddle Ball, p
    - Steps to reproduce the bug (if possible)
    - Screenshots or video (if applicable)
 
-You can also email us directly with the same information if you prefer.
+You can also email me directly with the same information if you prefer.
 
 ### When can I expect a response?
 
-We typically respond to support inquiries within 24-48 hours during business days. For GitHub issues, you can track progress directly on the issue thread.
+I typically respond to support inquiries within 24-48 hours during business days. For GitHub issues, you can track progress directly on the issue thread.
 
 ### Is Retro Paddle Ball available on other platforms?
 
@@ -40,17 +40,17 @@ Currently, Retro Paddle Ball is available for:
 - macOS (Intel & Apple Silicon)
 - Android 6.0+ (phones, tablets, and TVs)
 
-We're actively working on:
+I'm actively working on:
 - iOS (iPhone and iPad)
 
 ### How do I request a new feature?
 
-We love hearing your ideas! You can:
-1. Submit a feature request on our [GitHub Discussions page](https://github.com/stanlymt/retro-paddle-ball/discussions)
-2. Email us with your suggestions
-3. Chat with us directly through the support chat
+I love hearing your ideas! You can:
+1. Submit a feature request on my [GitHub Discussions page](https://github.com/stanlymt/retro-paddle-ball/discussions)
+2. Email me with your suggestions
+3. Chat with me directly through the support chat
 
-Feature suggestions from kids get bonus points! We particularly value ideas that enhance the game experience while keeping the retro feel intact.
+Feature suggestions from kids get bonus points! I particularly value ideas that enhance the game experience while keeping the retro feel intact.
 
 ### What controls does the game support?
 
@@ -79,8 +79,8 @@ Yes, I used tools like GitHub Copilot and OpenAI to accelerate certain aspects o
 
 ## Updates and News
 
-Stay informed about the latest updates, features, and news by following us on:
+Stay informed about the latest updates, features, and news by following me on:
 - [Github](https://github.com/stanlymt/retro-paddle-ball)
 - [LinkedIn](https://www.linkedin.com/in/stanlymt/)
 
-We appreciate your support and feedback as we continue to improve Retro Paddle Ball!
+I appreciate your support and feedback as I continue to improve Retro Paddle Ball!
