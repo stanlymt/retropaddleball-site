@@ -16,10 +16,6 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-defaults:
-  run:
-    working-directory: ./retropaddleball-site
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -45,7 +41,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './retropaddleball-site/_site'
+          path: './_site'
 
   deploy:
     environment:
