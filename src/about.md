@@ -58,7 +58,7 @@ Want to experience Retro Paddle Ball for yourself?
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
     </svg>
   </a>
-  <a href="https://forms.gle/vE2PeSRC9yjMF3gU8" target="_blank" class="inline-flex items-center gap-2 px-5 py-3 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors">
+  <a href="https://forms.gle/8qR6EuhsvzByeZ1k6" target="_blank" class="inline-flex items-center gap-2 px-5 py-3 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors">
     <span>Join Android Testing</span>
     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
