@@ -75,34 +75,59 @@ Get Retro Paddle Ball on your preferred platform and start playing today:
   <div class="bg-gray-100 p-6 rounded-lg shadow-sm">
     <h3 class="text-xl font-bold mb-3">Game Features</h3>
     <ul class="list-disc pl-5 space-y-1">
-      <li>Smooth ball physics and precise collision detection</li>
-      <li>Responsive controls across all input methods</li>
-      <li>Resolution-agnostic layout that adapts to any screen</li>
-      <li>Progressive difficulty that keeps you challenged</li>
-      <li>Leaderboards to track your highest scores</li>
-      <li>In-game help and customizable settings</li>
+      <li>🎯 Realistic physics with smooth paddle and ball dynamics</li>
+      <li>🎛️ Multiple input methods (Keyboard, Gamepad, Mouse, Touch)</li>
+      <li>✨ Visually immersive aiming and control gestures</li>
+      <li>📱 Optimized for desktop, tablet, and mobile</li>
+      <li>🎮 Single-player and two-player game modes</li>
+      <li>📈 Progressive difficulty that keeps you challenged</li>
+      <li>🏆 Leaderboards to track your highest scores</li>
     </ul>
   </div>
   <div class="bg-gray-100 p-6 rounded-lg shadow-sm">
     <h3 class="text-xl font-bold mb-3">Coming Soon</h3>
     <ul class="list-disc pl-5 space-y-1">
-      <li>AI opponent with adjustable difficulty levels</li>
-      <li>Network multiplayer over Wi-Fi</li>
-      <li>Power-ups and new game modes</li>
-      <li>Custom paddle designs and themes</li>
-      <li>iOS and web browser versions</li>
+      <li>🤖 AI opponents with adaptive difficulty levels</li>
+      <li>🌐 Local network multiplayer over Wi-Fi</li>
+      <li>🧠 Smart Paddle: AI trained on human gameplay data</li>
+      <li>🎲 Power-ups and special game modes</li>
+      <li>⚙️ In-game settings for customization</li>
+      <li>🧱 Dynamic objects and bonus items</li>
+      <li>📱 iOS and web browser versions</li>
     </ul>
   </div>
 </div>
 
 ## Game Controls
 
-| Input Type | Control Scheme                |
-|------------|-------------------------------|
-| Keyboard   | Arrow keys or `<(,)` and `>(.)` |
-| Gamepad    | D-Pad / Left Analog Stick    |
-| Touch      | Drag paddle directly         |
-| Mouse      | Move paddle horizontally     |
+Retro Paddle Ball supports multiple input methods for both single and two-player modes:
+
+| Input Type | Single Player | Two Player |
+|------------|---------------|------------|
+| Keyboard   | Arrow keys to move paddle<br>A/D keys to aim<br>Space/Enter to launch | Player 1: Same as Single Player<br>Player 2: Comma/Period keys to move<br>Z/C keys to aim |
+| Gamepad    | D-Pad or Left Stick to move<br>LB/RB bumpers to aim<br>Right Trigger (RT) to launch | Same controls with assigned gamepads |
+| Touch      | Drag paddle to move<br>Drag ball to aim<br>Release ball to launch | Same gestures for both players |
+| Mouse      | Click and drag paddle to move<br>Click and drag ball to aim<br>Release ball to launch | Similar to touch controls |
+
+The game automatically detects your input method and adapts the controls accordingly.
+
+## Game Modes
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <div class="bg-blue-50 p-6 rounded-lg border border-blue-100">
+    <h3 class="text-xl font-bold mb-3">🎮 Single Player</h3>
+    <p class="mb-4">Test your reflexes and focus in single player mode. Control the bottom paddle and keep the ball alive for as long as possible. The walls are your only opponents—but don't be fooled, the speed and trajectory of the ball escalate with time, challenging even the quickest fingers.</p>
+    <p class="font-medium">🎯 <strong>Goal:</strong> Rack up a high score by keeping the ball in play.</p>
+    <p class="font-medium">🧠 <strong>Pro Tip:</strong> Use the aiming line to plan tricky ricochets off the walls!</p>
+  </div>
+  
+  <div class="bg-blue-50 p-6 rounded-lg border border-blue-100">
+    <h3 class="text-xl font-bold mb-3">🏆 Two Player</h3>
+    <p class="mb-4">Challenge a friend in head-to-head action! One player controls the bottom paddle, the other takes the top. The first to miss the ball concedes the round.</p>
+    <p class="font-medium">🎯 <strong>Gameplay:</strong> Pure reflex combat. Precise movement and aim win the game.</p>
+    <p class="font-medium">🔄 <strong>Multiround Match:</strong> Play a best-of series to crown the ultimate paddle master!</p>
+  </div>
+</div>
 
 ## A Labor of Love
 
