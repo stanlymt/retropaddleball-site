@@ -59,7 +59,7 @@ Get Retro Paddle Ball on your preferred platform and start playing today:
     <ms-store-badge
       productid="9nb83t8p05pw"
       window-mode="full"
-      theme="auto"
+      theme="light"
       size="large"
       language="en-us"
       animation="on">
