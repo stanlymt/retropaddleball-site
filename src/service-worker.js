@@ -6,7 +6,7 @@ const URLS_TO_CACHE = [
   '/css/tailwind.css',
   '/assets/js/error-handler.js',
   '/assets/js/scroll-to-top.js',
-  '/assets/icon.png',
+  '/assets/icon.webp',
   '/assets/hero.webp',
   '/manifest.json',
   '/about/',

@@ -33,7 +33,7 @@ ESSENTIAL_FILES=(
     "_site/privacy/index.html"
     "_site/404.html"
     "_site/assets/hero.webp"
-    "_site/assets/icon.png"
+    "_site/assets/icon.webp"
     "_site/robots.txt"
     "_site/sitemap.xml"
     "_site/manifest.json"

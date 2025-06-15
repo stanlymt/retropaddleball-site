@@ -9,7 +9,7 @@
   "orientation": "any",
   "icons": [
     {
-      "src": "/assets/icon.png",
+      "src": "/assets/icon.webp",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
@@ -18,13 +18,13 @@
   "categories": ["games", "entertainment"],
   "screenshots": [
     {
-      "src": "/assets/screenshot1.png",
+      "src": "/assets/screenshot1.webp",
       "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide"
     },
     {
-      "src": "/assets/screenshot2.png", 
+      "src": "/assets/screenshot2.webp", 
       "sizes": "640x1136",
       "type": "image/png",
       "form_factor": "narrow"

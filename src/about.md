@@ -5,7 +5,7 @@ title: The Story Behind Retro Paddle Ball
 
 # 🕹️ From Retro Memories to a Modern Learning Journey
 
-![Game Screenshots Collage](/assets/screenshots-collage.png)
+![Game Screenshots Collage](/assets/screenshots-collage.webp)
 
 A few months ago, I started a side project—a simple paddle ball game—for my kids. They love playing on RetroArch and asked, **"Can you build one just for us?"** That question brought back memories of my early days coding DOS games in C++ at age 12, and rekindled a passion I hadn't touched in years.
 
@@ -42,9 +42,9 @@ Along the way, I rediscovered the value of deep focus, debugging under constrain
 ## Screenshots
 
 <div class="grid grid-cols-2 md:grid-cols-3 gap-4 my-6">
-  <img src="/assets/screenshot1.png" alt="Game Screenshot 1" class="rounded-lg">
-  <img src="/assets/screenshot2.png" alt="Game Screenshot 2" class="rounded-lg">
-  <img src="/assets/screenshot3.png" alt="Game Screenshot 3" class="rounded-lg">
+  <img src="/assets/screenshot1.webp" alt="Game Screenshot 1" class="rounded-lg">
+  <img src="/assets/screenshot2.webp" alt="Game Screenshot 2" class="rounded-lg">
+  <img src="/assets/screenshot3.webp" alt="Game Screenshot 3" class="rounded-lg">
 </div>
 
 ## Try It Out!

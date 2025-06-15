@@ -72,7 +72,7 @@ If you have a custom domain:
 
 ### 404 Errors
 - Check that `src/.nojekyll` exists and is being copied
-- Verify asset paths start with `/` (e.g., `/assets/image.png`)
+- Verify asset paths start with `/` (e.g., `/assets/image.webp`)
 - Ensure the repository name matches your expected URL path
 
 ### Workflow Not Triggering
