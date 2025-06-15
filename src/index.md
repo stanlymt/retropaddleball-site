@@ -3,7 +3,10 @@ layout: page.njk
 title: Retro Paddle Ball - Classic Arcade Gaming Reimagined
 ---
 
-![Retro Paddle Ball Gameplay](/assets/hero.webp)
+<picture>
+  <source srcset="/assets/hero.webp" type="image/webp">
+  <img src="/assets/hero.webp" alt="Retro Paddle Ball Gameplay" width="1200" height="628" loading="eager" fetchpriority="high">
+</picture>
 
 **Retro Paddle Ball** brings the timeless thrill of classic paddle-and-ball arcade gaming to modern devices with smooth physics, crisp retro-inspired graphics, and responsive controls that feel just right.
 
@@ -19,7 +22,7 @@ title: Retro Paddle Ball - Classic Arcade Gaming Reimagined
     </ul>
   </div>
   <div class="md:w-1/2">
-    <video autoplay loop muted playsinline class="rounded-lg shadow-md w-full">
+    <video autoplay loop muted playsinline class="rounded-lg shadow-md w-full" width="640" height="360" loading="lazy">
       <source src="/assets/demo.webm" type="video/webm">
       Your browser does not support the video tag.
     </video>
@@ -55,15 +58,28 @@ Get Retro Paddle Ball on your preferred platform and start playing today:
 <div class="flex flex-col md:flex-row gap-6 items-center mb-6">
   <div>
     <h3 class="text-lg font-semibold mb-2">Windows Store</h3>
-    <script type="module" src="https://get.microsoft.com/badge/ms-store-badge.bundled.js"></script>
-    <ms-store-badge
-      productid="9nb83t8p05pw"
-      window-mode="full"
-      theme="light"
-      size="large"
-      language="en-us"
-      animation="on">
-    </ms-store-badge>
+    <script type="module" defer>
+      // Lazy load the Microsoft Store badge
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            import('https://get.microsoft.com/badge/ms-store-badge.bundled.js');
+            observer.disconnect();
+          }
+        });
+      });
+      observer.observe(document.querySelector('#ms-store-badge-container'));
+    </script>
+    <div id="ms-store-badge-container">
+      <ms-store-badge
+        productid="9nb83t8p05pw"
+        window-mode="full"
+        theme="light"
+        size="large"
+        language="en-us"
+        animation="on">
+      </ms-store-badge>
+    </div>
   </div>
   
   <div>

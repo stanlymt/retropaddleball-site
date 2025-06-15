@@ -38,10 +38,57 @@ The site will be available at `http://localhost:8080` with hot reloading enabled
 
 Build the site for production:
 ```bash
-npm run build
+# Using the build script (recommended)
+./build.sh
+
+# Or using npm if you prefer
+npm run build:production
 ```
 
+This will:
+1. Clean the output directory
+2. Build CSS with Tailwind in production mode (purged, minified)
+3. Build the Eleventy site with HTML minification
+4. Generate responsive image variants for different devices
+5. Optimize all images for web
+
 The built site will be in the `_site` directory.
+
+### Troubleshooting Build Issues
+
+If you encounter build errors:
+
+1. Make sure all dependencies are installed:
+   ```bash
+   npm install
+   ```
+
+2. If image processing fails, you may need to install libvips:
+   ```bash
+   # On macOS with Homebrew
+   brew install vips
+   
+   # On Ubuntu/Debian
+   sudo apt-get install libvips-dev
+   ```
+
+3. Try building with specific steps to isolate issues:
+   ```bash
+   # Clean first
+   npm run clean
+   
+   # Build CSS only
+   npm run build:css
+   
+   # Build Eleventy only
+   npx @11ty/eleventy
+   
+   # Generate responsive images
+   node generate-responsive-images.js
+   
+   # Optimize images
+   node imagemin.config.js
+   ```
 
 ### Deployment
 
@@ -76,6 +123,17 @@ retropaddleball-site/
 - **GitHub Actions** - Automated deployment
 - **GitHub Pages** - Hosting
 
+## 🎨 Tailwind CSS
+
+This project uses Tailwind CSS for styling:
+
+- Tailwind CSS is processed during build through PostCSS
+- The main Tailwind file is in `src/css/tailwind.css`
+- Configuration is in `tailwind.config.js` 
+- Tailwind Typography plugin is used for basic text styling
+
+**Important:** Do not use the CDN version in production. The proper build system is already set up to compile Tailwind CSS.
+
 ## 📝 Content Management
 
 - Pages are written in Markdown with front matter
@@ -106,6 +164,17 @@ To set up in GitHub:
 2. Navigate to Secrets and Variables > Actions
 3. Add a new repository secret named `CLOUDFLARE_ANALYTICS_TOKEN`
 4. Paste your Cloudflare Analytics token value
+
+## ### Browser Compatibility
+
+This site is built with modern browsers in mind and does not support Internet Explorer. We use:
+
+- Modern CSS features
+- Custom properties
+- Flexbox and Grid layout
+- ES6+ JavaScript features
+
+The browserslist configuration excludes IE support to prevent generating deprecated vendor prefixes.
 
 ## �📄 License
 

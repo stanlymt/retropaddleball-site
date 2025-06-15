@@ -1,0 +1,45 @@
+/* Optimized scroll to top button styles */
+.scroll-top-btn {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 45px;
+  background-color: rgba(37, 99, 235, 0.7); /* Translucent blue */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  z-index: 9000; /* Lower than tawk.to widget */
+  transition: opacity 0.3s, background-color 0.3s;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform, opacity; /* Optimize animations */
+}
+
+.scroll-top-btn:hover {
+  background-color: rgba(37, 99, 235, 0.9);
+}
+
+.scroll-top-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.scroll-top-arrow {
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 15px solid white;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-top-btn {
+    transition: none;
+  }
+}

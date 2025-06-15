@@ -1,0 +1,11 @@
+/* Import high contrast reset first */
+@import "high-contrast-reset.css";
+
+/* Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import custom CSS */
+@import "custom.css";
+@import "scroll-to-top.css";

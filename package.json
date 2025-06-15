@@ -4,17 +4,40 @@
   "description": "Official website for Retro Paddle Ball game",
   "main": ".eleventy.js",
   "scripts": {
-    "dev": "eleventy --serve",
-    "start": "eleventy --serve",
-    "build": "eleventy",
-    "clean": "rm -rf _site"
+    "dev": "mkdir -p _site/css && npm run build:css && eleventy --serve",
+    "start": "mkdir -p _site/css && npm run build:css && eleventy --serve",
+    "build": "NODE_ENV=production mkdir -p _site/css && npm run build:css && eleventy",
+    "clean": "rm -rf _site",
+    "build:css": "npx tailwindcss -i ./src/css/tailwind.css -o ./_site/css/tailwind.css --minify",
+    "optimize:images": "node imagemin.config.js",
+    "responsive:images": "node generate-responsive-images.js",
+    "build:production": "npm run clean && NODE_ENV=production npm run build:css && NODE_ENV=production eleventy && npm run responsive:images && npm run optimize:images"
   },
-  "keywords": ["eleventy", "static-site", "game", "retro", "paddle-ball"],
+  "keywords": [
+    "eleventy",
+    "static-site",
+    "game",
+    "retro",
+    "paddle-ball"
+  ],
   "author": "StanSween",
   "license": "MIT",
   "type": "commonjs",
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.1"
+    "@11ty/eleventy": "^3.1.1",
+    "@11ty/eleventy-plugin-bundle": "^3.0.6",
+    "@tailwindcss/typography": "^0.5.10",
+    "autoprefixer": "^10.4.21",
+    "html-minifier": "^4.0.0",
+    "imagemin": "^8.0.1",
+    "imagemin-cli": "^7.0.0",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-svgo": "^10.0.1",
+    "sharp": "^0.33.0",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.4.2"
   },
   "repository": {
     "type": "git",
@@ -22,5 +45,11 @@
   },
   "engines": {
     "node": ">=18.0.0"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all",
+    "not IE > 0"
+  ]
 }

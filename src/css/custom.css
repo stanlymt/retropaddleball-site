@@ -1,0 +1,21 @@
+/* Custom styles to complement Tailwind CSS */
+
+/* Fix high contrast mode using modern standards */
+@media (forced-colors: active) {
+  a, button, input, select, textarea {
+    forced-color-adjust: none;
+  }
+  
+  /* Override any styles that might use -ms-high-contrast */
+  *[class*="hover"] {
+    forced-color-adjust: none;
+  }
+}
+
+/* CSS reset to prevent external scripts from causing deprecation warnings */
+iframe {
+  all: unset;
+  display: block;
+}
+
+/* Add any other custom styles below */

@@ -1,0 +1,51 @@
+/* Modern CSS reset for Forced Colors Mode */
+
+:root {
+  forced-color-adjust: none;
+}
+
+/* Override for specific elements */
+@media (forced-colors: active) {
+  *,
+  *::before,
+  *::after {
+    forced-color-adjust: none !important;
+    -ms-high-contrast: none !important; /* Direct override */
+  }
+  
+  /* Ensure links and buttons have proper styling in high contrast mode */
+  a, button, [role="button"], input, select, textarea, .prose a {
+    forced-color-adjust: auto; /* Let these elements adapt to high contrast */
+  }
+  
+  /* Ensure images are visible */
+  img, svg {
+    forced-color-adjust: auto;
+  }
+}
+
+/* Additional resets */
+iframe {
+  all: unset;
+  display: block;
+  border: none;
+}
+
+/* Specific styles for Tawk.to iframe */
+iframe[title*="chat"], 
+iframe[src*="tawk.to"], 
+iframe[id*="tawk"], 
+#tawkchat-container iframe,
+#tawkchat-minified-container iframe {
+  all: initial !important; /* Reset all properties */
+  display: block !important;
+  border: none !important;
+  background: transparent !important;
+  width: auto !important;
+  height: auto !important;
+  position: fixed !important;
+  z-index: 999999 !important;
+  /* Completely override any inherited styles */
+  forced-color-adjust: none !important;
+  -ms-high-contrast: none !important;
+}

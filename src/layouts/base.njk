@@ -3,6 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="normal" />
+  <meta name="forced-colors" content="none" />
+  
+  <!-- Preconnect to domains -->
+  <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin />
+  <link rel="preconnect" href="https://embed.tawk.to" crossorigin />
+  <link rel="preconnect" href="https://get.microsoft.com" crossorigin />
+  
+  <!-- Critical CSS optimization -->
+  <style>
+    /* Minimize CLS by setting default dimensions for images */
+    img:not([width]) {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      display: block;
+    }
+    /* Font display optimization */
+    @font-face {
+      font-family: system-ui;
+      font-display: swap;
+    }
+  </style>
+  
+  <!-- Error handler should load early to catch any errors -->
+  <script src="/assets/js/error-handler.js"></script>
   
   <!-- SEO Meta Tags -->
   <meta name="description" content="{{ description or site.description }}" />
@@ -30,17 +56,24 @@
   <!-- PWA Manifest -->
   <link rel="manifest" href="/manifest.json" />
   <meta name="theme-color" content="#2563eb" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="{{ site.title }}" />
+  <meta name="application-name" content="{{ site.title }}" />
   
   <title>{{ title }} | {{ site.title }}</title>
 
-  <!-- Tailwind CDN for lightweight styling -->
-  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="/css/tailwind.css?v={{ "now" | date("X") }}">
+  
+  <!-- Scroll-to-top styles - included separately to ensure loading -->
+  <link rel="stylesheet" href="/assets/css/scroll-to-top.css?v={{ "now" | date("X") }}">
 </head>
 <body class="bg-neutral-100 text-neutral-900 antialiased">
   <header class="bg-white shadow-md">
     <div class="max-w-4xl mx-auto px-4 py-3 flex items-center gap-3">
       <a href="/" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
-        <img src="/assets/icon.png" class="w-8 h-8" alt="Logo" />
+        <img src="/assets/icon.png" class="w-8 h-8" alt="Logo" width="32" height="32" />
         <span class="font-semibold">Retro Paddle Ball</span>
       </a>
     </div>
@@ -52,29 +85,116 @@
 
   <footer class="text-center text-sm py-4 text-neutral-600">
     © {{ "now" | date("yyyy") }} Stanly Thomas
+    <a href="/" class="underline hover:no-underline">Home</a> •
     <a href="/about" class="underline hover:no-underline">About</a> •
     <a href="/privacy" class="underline hover:no-underline">Privacy</a> •
     <a href="/support" class="underline hover:no-underline">Support</a>
   </footer>
   
-  <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/684d997ca3ad3e1910ba115e/1itnhv3he';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+  <!-- Static scroll to top button -->
+  <button id="scroll-top-btn" class="scroll-top-btn" aria-label="Scroll to top" title="Scroll to top">
+    <span class="scroll-top-arrow"></span>
+  </button>
+  
+  <!-- Load JavaScript files directly -->
+  <script src="/assets/js/scroll-to-top.js?v={{ "now" | date("X") }}" defer></script>
+  
+  <!-- Optimized tawk.to loading with lazy loading -->
+  <script>
+    // Track if script is loaded to avoid duplicates
+    window.tawkToScriptLoaded = false;
+    
+    // Tawk.to loading function
+    function loadTawkToWidget() {
+      if (window.tawkToScriptLoaded) return;
+      
+      console.log('Loading tawk.to widget...');
+      window.tawkToScriptLoaded = true;
+      
+      // Set up Tawk API
+      window.Tawk_API = window.Tawk_API || {};
+      window.Tawk_LoadStart = new Date();
+      
+      // Add status callbacks
+      window.Tawk_API.onLoad = function() {
+        console.log('✅ Tawk.to chat widget loaded successfully!');
+      };
+      
+      window.Tawk_API.onError = function(error) {
+        console.warn('Tawk.to error (handled):', error);
+        return false; // Prevent error propagation
+      };
+      
+      // Create and load the script
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://embed.tawk.to/684d997ca3ad3e1910ba115e/1itnhv3he';
+      script.charset = 'UTF-8';
+      script.crossOrigin = 'anonymous';
+      
+      script.onerror = function(error) {
+        console.warn('Tawk.to script failed to load (network issue?)');
+      };
+      
+      document.head.appendChild(script);
+      
+      // Clean up event listeners
+      window.removeEventListener('scroll', handleScroll);
+      clearTimeout(timeoutId);
+    }
+    
+    // Optimized scroll handler
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (window.scrollY > 200) {
+            loadTawkToWidget();
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    
+    // Add event listener for scroll
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    // Fallback - load after 3 seconds if user hasn't scrolled
+    const timeoutId = setTimeout(loadTawkToWidget, 3000);
+  </script>
 
 {% if site.cloudflareAnalyticsToken %}
-<!-- Cloudflare Web Analytics -->
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "{{ site.cloudflareAnalyticsToken }}"}'></script>
-<!-- End Cloudflare Web Analytics -->
+<!-- Cloudflare Web Analytics - load with a slight delay -->
+<script>
+  // Delay Cloudflare analytics load to prioritize page content
+  setTimeout(() => {
+    const script = document.createElement('script');
+    script.defer = true;
+    script.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+    script.dataset.cfBeacon = '{"token": "{{ site.cloudflareAnalyticsToken }}"}';
+    document.body.appendChild(script);
+  }, 2000);
+</script>
 {% endif %}
+
+<!-- Register Service Worker for offline support -->
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      // Delay service worker registration slightly to prioritize rendering
+      setTimeout(() => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(registration => {
+            console.log('ServiceWorker registered with scope:', registration.scope);
+          })
+          .catch(error => {
+            console.error('ServiceWorker registration failed:', error);
+            // Don't block the page if service worker fails
+          });
+      }, 1000);
+    });
+  }
+</script>
 </body>
 </html>

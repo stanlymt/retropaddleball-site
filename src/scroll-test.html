@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scroll Button Test</title>
+  <style>
+    /* Scroll to top button styles */
+    .scroll-top-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      text-align: center;
+      cursor: pointer;
+      z-index: 99999;
+      opacity: 0.9;
+      transition: opacity 0.3s, transform 0.3s;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .scroll-top-arrow {
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 15px solid white;
+    }
+  </style>
+</head>
+<body>
+  <h1>Scroll Button Test</h1>
+  <p>This page tests the scroll to top button.</p>
+  
+  <button id="static-btn" class="scroll-top-btn">
+    <span class="scroll-top-arrow"></span>
+  </button>
+  
+  <script>
+    document.getElementById('static-btn').addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+</html>
