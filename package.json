@@ -4,6 +4,7 @@
   "description": "Official website for Retro Paddle Ball game",
   "main": ".eleventy.js",
   "scripts": {
+    "precheck": "node check-node-version.js",
     "dev": "mkdir -p _site/css && npm run build:css && eleventy --serve",
     "start": "mkdir -p _site/css && npm run build:css && eleventy --serve",
     "build": "NODE_ENV=production mkdir -p _site/css && npm run build:css && eleventy",
@@ -11,7 +12,7 @@
     "build:css": "npx tailwindcss -i ./src/css/tailwind.css -o ./_site/css/tailwind.css --minify",
     "optimize:images": "node imagemin.config.js",
     "responsive:images": "node generate-responsive-images.js",
-    "build:production": "npm run clean && NODE_ENV=production npm run build:css && NODE_ENV=production eleventy && npm run responsive:images && npm run optimize:images"
+    "build:production": "npm run precheck && npm run clean && NODE_ENV=production npm run build:css && NODE_ENV=production eleventy && npm run responsive:images && npm run optimize:images"
   },
   "keywords": [
     "eleventy",
@@ -44,7 +45,7 @@
     "url": "https://github.com/stanlymt/retro-paddle-ball"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=22.0.0"
   },
   "browserslist": [
     ">0.2%",

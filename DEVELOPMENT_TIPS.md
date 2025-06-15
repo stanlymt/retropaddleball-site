@@ -74,3 +74,28 @@ When deploying to production:
 2. Test the `_site` directory contents
 3. Ensure all assets are properly optimized
 4. Check that cache headers are working correctly
+
+### GitHub Actions Deployment
+
+The site deploys automatically via GitHub Actions when you push to the `main` branch. The workflow:
+
+1. **Uses Node.js 22** - Required for Eleventy v3 compatibility
+2. **Checks Node.js version** - Ensures compatibility before building
+3. **Updates browserslist database** - Eliminates outdated browser data warnings
+4. **Runs production build** - Includes all optimizations and image processing
+5. **Deploys to GitHub Pages** - Automatic deployment with proper artifact handling
+
+### Troubleshooting GitHub Actions
+
+If the workflow fails:
+
+1. **Check Node.js version**: Workflow uses Node.js 22+
+2. **Review build logs**: Look for specific error messages
+3. **Test locally**: Run `npm run build:production` to reproduce issues
+4. **Check dependencies**: Ensure all npm packages are compatible
+
+### Environment Variables
+
+The following secrets need to be set in GitHub repository settings:
+
+- `CLOUDFLARE_ANALYTICS_TOKEN` - For Cloudflare Web Analytics (optional)

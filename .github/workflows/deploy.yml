@@ -24,14 +24,23 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '22'
           cache: 'npm'
+          
+      - name: Verify Node.js version
+        run: node --version
+        
+      - name: Check Node.js compatibility
+        run: node check-node-version.js
           
       - name: Install dependencies
         run: npm ci
         
+      - name: Update browserslist database
+        run: npx update-browserslist-db@latest
+        
       - name: Build site
-        run: npm run build
+        run: npm run build:production
         env:
           CLOUDFLARE_ANALYTICS_TOKEN: ${{ secrets.CLOUDFLARE_ANALYTICS_TOKEN }}
         

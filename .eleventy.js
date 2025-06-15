@@ -1,11 +1,11 @@
-/** .eleventy.js  — CommonJS syntax **/
+/** .eleventy.js  — Eleventy v3 compatible configuration **/
 const fs = require('fs/promises');
 const path = require('path');
-const { EleventyRenderPlugin } = require("@11ty/eleventy");
 const htmlmin = require("html-minifier");
 
-module.exports = function (eleventyConfig) {
+module.exports = async function (eleventyConfig) {
   /* ── 1. Add 11ty plugins ──────────────────────────── */
+  const { EleventyRenderPlugin } = await import("@11ty/eleventy");
   eleventyConfig.addPlugin(EleventyRenderPlugin);
 
   /* ── 2. YOUR OWN DATE FILTER ────────────────────────── */
