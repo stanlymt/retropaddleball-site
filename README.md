@@ -20,6 +20,10 @@ This is the official website for Retro Paddle Ball, built with [Eleventy](https:
    ```bash
    npm install
    ```
+4. Copy `.env.example` to `.env` and add your environment variables:
+   ```bash
+   cp .env.example .env
+   ```
 
 ### Development
 
@@ -87,6 +91,22 @@ The main configuration is in `.eleventy.js`, which sets up:
 - Date filters
 - Markdown processing with Nunjucks
 
-## 📄 License
+## � Environment Variables
+
+The website uses environment variables to handle sensitive information securely. These are managed in different ways depending on the environment:
+
+- **Development**: Uses a local `.env` file (copy from `.env.example`)
+- **Production**: Uses GitHub Secrets for the deployment workflow
+
+Required environment variables:
+- `CLOUDFLARE_ANALYTICS_TOKEN`: Token for Cloudflare Web Analytics
+
+To set up in GitHub:
+1. Go to your repository settings
+2. Navigate to Secrets and Variables > Actions
+3. Add a new repository secret named `CLOUDFLARE_ANALYTICS_TOKEN`
+4. Paste your Cloudflare Analytics token value
+
+## �📄 License
 
 This project is licensed under the MIT License.

@@ -16,5 +16,7 @@ module.exports = {
   ],
   "social": {
     "github": "https://github.com/stanlymt/retro-paddle-ball"
-  }
+  },
+  // Use environment variable with a fallback for local development
+  "cloudflareAnalyticsToken": process.env.CLOUDFLARE_ANALYTICS_TOKEN || null
 };

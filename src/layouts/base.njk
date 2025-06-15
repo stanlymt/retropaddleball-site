@@ -71,8 +71,10 @@ s0.parentNode.insertBefore(s1,s0);
 </script>
 <!--End of Tawk.to Script-->
 
+{% if site.cloudflareAnalyticsToken %}
 <!-- Cloudflare Web Analytics -->
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0257e8c6093448788ce99f3ed260b3b8"}'></script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "{{ site.cloudflareAnalyticsToken }}"}'></script>
 <!-- End Cloudflare Web Analytics -->
+{% endif %}
 </body>
 </html>

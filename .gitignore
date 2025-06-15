@@ -38,3 +38,4 @@ logs
 # Cache
 .cache/
 .parcel-cache/
+.env.example
